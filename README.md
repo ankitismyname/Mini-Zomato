@@ -1,27 +1,38 @@
-# 🍽️ Zomato Restaurant Data Loader & Search Platform
+# 🍴 Zomato Restaurant Search Platform
 
-This project provides a complete system to **load Zomato restaurant data into a database**, expose it through a **REST API service**, and build a **frontend UI** for browsing and searching restaurants with advanced capabilities.
+A complete system to load restaurant data, search based on location and cuisines (even through food images), built with Supabase, Next.js, React.js, and Tailwind CSS.
 
 ---
 
 ## 🚀 Features
 
-- **Load Zomato Data**  
-  An independent script to fetch and store Zomato restaurant data into your database.
+- **Load Zomato restaurant data** into Supabase database.
+- **REST API endpoints** built using Next.js API routes:
+  - Get restaurant by ID.
+  - Get list of restaurants with ID-based pagination.
+  - Search restaurants within a latitude and longitude range.
+  - Image-based search to find restaurants by cuisine.
+- **Frontend** built using React.js and Tailwind CSS.
+- **Pagination**
+  - SQL query with **ID-based pagination** for high performance.
+  - JavaScript `range()` function to render pages in frontend.
+- **Geo Search**
+  - **SQL function** used to filter restaurants within a given radius.
+- **Image Search**
+  - Upload a food image (e.g., pasta, ice cream).
+  - TensorFlow.js model predicts cuisine.
+  - Match predicted cuisine against restaurant cuisines in database (split by commas).
 
-- **REST API Service**  
-  Exposes the following APIs:
-  1. **Get Restaurant by ID** — Fetch detailed information of a specific restaurant.
-  2. **Get List of Restaurants** — Retrieve a paginated list of restaurants.
+---
 
-- **Frontend UI**
-  - List page displaying available restaurants with pagination.
-  - Individual restaurant detail page.
+## 🛠️ Technologies Used
 
-- **Advanced Search**
-  - Search restaurants within a **given latitude and longitude range** (e.g., within 3 km).
-  - **Image search** — Upload an image of food (e.g., pasta, ice cream) and find restaurants offering similar cuisines.
+- **Database**: Supabase (PostgreSQL)
+- **Backend APIs**: Next.js API Routes
+- **Frontend**: React.js, Tailwind CSS
+- **Machine Learning**: TensorFlow.js (food recognition model)
+- **SQL**:
+  - ID-based Pagination
+  - Geo-radius Search using SQL
 
-- **Additional Features (Bonus)**
-  - **Filter restaurants** by Country, Average Spend for Two, and Cuisines.
-  - **Search restaurants** by Name and Description.
+---
