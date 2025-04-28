@@ -1,36 +1,27 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🍽️ Zomato Restaurant Data Loader & Search Platform
 
-## Getting Started
+This project provides a complete system to **load Zomato restaurant data into a database**, expose it through a **REST API service**, and build a **frontend UI** for browsing and searching restaurants with advanced capabilities.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🚀 Features
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **Load Zomato Data**  
+  An independent script to fetch and store Zomato restaurant data into your database.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+- **REST API Service**  
+  Exposes the following APIs:
+  1. **Get Restaurant by ID** — Fetch detailed information of a specific restaurant.
+  2. **Get List of Restaurants** — Retrieve a paginated list of restaurants.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **Frontend UI**
+  - List page displaying available restaurants with pagination.
+  - Individual restaurant detail page.
 
-## Learn More
+- **Advanced Search**
+  - Search restaurants within a **given latitude and longitude range** (e.g., within 3 km).
+  - **Image search** — Upload an image of food (e.g., pasta, ice cream) and find restaurants offering similar cuisines.
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **Additional Features (Bonus)**
+  - **Filter restaurants** by Country, Average Spend for Two, and Cuisines.
+  - **Search restaurants** by Name and Description.
